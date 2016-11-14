@@ -1,0 +1,17 @@
+#styleRed {
+  color: red;
+  border: 2px solid red;
+  width: 150px;
+}
+#styleGreen {
+  color: green;
+  border: 2px solid green;
+  width: 90px;
+}
+body {
+  font-size: 1.5em;
+}
+button {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
