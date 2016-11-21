@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Shopping List Check Off</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/myStyle.css">
+  </head>
+<body ng-app="ShoppingListCheckOff">
+  <div class="container">
+  <h1>Shopping List Check Off</h1>
+
+  <div class="row">
+
+    <!-- To Buy List -->
+    <div class="col-sm-6" ng-controller="ToBuyController as buy">
+     <h2>To Buy:</h2>
+     <ol>
+       <li ng-repeat="item in buy.items">
+          Buy {{ item.quantity }}  {{ item.name }}
+          <button ng-click="buy.removeItem($index);">Bought</button>
+        </li>
+       <!--<li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
+       <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
+     -->
+   </ol>
+   <div ng-if=buy.error() class="emptyMessage">{{buy.errorMessage}}</div>
+     <!--<div class="emptyMessage">Everything is bought!</div>-->
+    </div>
+
+    <!-- Already Bought List -->
+    <div class="col-sm-6" ng-controller="AlreadyBoughtController as bought">
+     <h2>Already Bought:</h2>
+     <ol>
+       <li ng-repeat="item in bought.items">
+         Bought {{ item.quantity }}  {{ item.name }}
+       </li>
+
+     </ol>
+     <div ng-if=bought.error() class="emptyMessage">{{bought.errorMessage}}</div>
+    <!-- <div class="emptyMessage">Nothing bought yet.</div>-->
+    </div>
+  </div>
+</div>
+<script src="script/angular.min.js"></script>
+<script src="script/app.js"></script>
+</body>
+</html>
