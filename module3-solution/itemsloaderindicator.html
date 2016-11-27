@@ -1,0 +1,8 @@
+<div>
+  <ol>
+    <li ng-repeat="item in narrow.items">
+        {{item.short_name}}: {{item.description}}  <button class="myBotton" ng-click="narrow.onRemove({index: $index});">Remove Item</button>
+    </li>
+  </ol>
+  <div class="error" ng-if="narrow.message">{{narrow.message}}</div>
+</div>

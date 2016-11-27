@@ -1,0 +1,24 @@
+h1 {
+  margin-bottom: 30px;
+}
+input[type="text"] {
+  width: 200px;
+  float: left;
+}
+.narrow-button {
+  float: left;
+  margin-left: 10px;
+}
+body{
+  font-size: 1.5em;
+  background-color: #F5F5DC;
+}
+.error {
+  font-weight: bold;
+  color: red;
+  font-size: 1.2em;
+}
+.myBotton {
+  background-color: green;
+  color: white;
+}
